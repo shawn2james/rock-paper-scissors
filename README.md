@@ -2,4 +2,6 @@
 ### Demo Video
 ![DEMO](demo.gif)
 
-The [requirements.txt](requirements.txt) file contains all the libraries/modules required for this project
+**The [requirements.txt](requirements.txt) file contains all the libraries/modules required for this project**
+
+
