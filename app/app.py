@@ -49,10 +49,12 @@ display_play_result = False
 play = True
 # the first opening screen
 while True:
-    ret, frame = video.read()  # returns ret and the frame
+    check, frame = video.read()  # returns ret and the frame
     frame = cv2.flip(frame, 1)
 
-    cv2.putText(frame, "PRESS 'p' TO CONTINUE AND 'q' TO QUIT!", org=(20, 60), fontFace=cv2.FONT_HERSHEY_COMPLEX, fontSca1e=0.8, color=(0, 0, 0), thickness=2)
+    cv2.putText(frame, "PRESS 'p' to continue and 'q' to quit!",
+                org=(50, 20), fontFace=cv2.FONT_HERSHEY_COMPLEX,
+                fontScale=0.8, color=(0, 0, 0), thickness=2)
     cv2.imshow('Image', frame)
     key = cv2.waitKey(1)
     # quit if 'q' is pressed
@@ -68,6 +70,8 @@ player_score, comp_score = 0, 0
 
 if play:
     while True:
+        if player_score == 5 or comp_score == 5:
+            break
         # update global time
         global_current = time()
         global_delta += global_current-global_previous_time
@@ -159,19 +163,24 @@ if play:
                           (COMP_X1, COMP_Y1, COMP_X2, COMP_Y2),
                           (X_OFFSET, Y_OFFSET))
 
-            # quit if 'q' is pressed
+        # quit if 'q' is pressed
         if key == ord('q'):
             break
 
         cv2.imshow("Image", frame)
+        player_score = 5
+    ##################################################################################################################################
+    while True:
+        print('entered....')
+        check, frame = video.read()
+        frame = cv2.flip(frame, 1)
 
-        if player_score == 5 or comp_score == 5:
+        cv2.putText(frame, "GAME OVER",
+                    org=(50, 20), fontFace=cv2.FONT_HERSHEY_COMPLEX,
+                    fontScale=0.8, color=(0, 0, 0), thickness=2)
+        cv2.imshow('Image', frame)
+        key = cv2.waitKey(1)
+
+        if key == ord('q'):
             break
-##################################################################################################################################
-        while True:
-            ret, frame = video.read()
-            frame = cv2.flip(frame, 1)
-
-            cv2.imshow('Image', frame)
-
 video.release()
