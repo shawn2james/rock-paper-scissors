@@ -10,3 +10,11 @@ The modules can be pip installed by the following command:
 <br>
 `pip install -r requirements.txt`
 
+## Tech Stack
+- PyTorch
+- OpenCV
+- Google Colab
+- Jupyter Notebook
+- Pillow (image processing)
+- numpy
+- matplotlib
