@@ -53,8 +53,8 @@ while True:
     frame = cv2.flip(frame, 1)
 
     cv2.putText(frame, "PRESS 'p' to continue and 'q' to quit!",
-                org=(50, 20), fontFace=cv2.FONT_HERSHEY_COMPLEX,
-                fontScale=0.8, color=(0, 0, 0), thickness=2)
+                org=(10, 50), fontFace=cv2.FONT_HERSHEY_DUPLEX,
+                fontScale=1, color=(23, 5, 72), thickness=2)
     cv2.imshow('Image', frame)
     key = cv2.waitKey(1)
     # quit if 'q' is pressed
@@ -168,10 +168,8 @@ if play:
             break
 
         cv2.imshow("Image", frame)
-        player_score = 5
     ##################################################################################################################################
     while True:
-        print('entered....')
         check, frame = video.read()
         frame = cv2.flip(frame, 1)
 
