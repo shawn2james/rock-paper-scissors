@@ -11,6 +11,7 @@ The modules can be pip installed by the following command:
 `pip install -r requirements.txt`
 
 ## Tech Stack
+- Python3
 - PyTorch
 - OpenCV
 - Google Colab
