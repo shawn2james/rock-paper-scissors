@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # imports
 import cv2
 from random import randint
