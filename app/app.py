@@ -164,6 +164,19 @@ if play:
                           (COMP_X1, COMP_Y1, COMP_X2, COMP_Y2),
                           (X_OFFSET, Y_OFFSET))
 
+        
+        if key == 82:
+            PLAYER_Y1, PLAYER_Y2 = PLAYER_Y1-10, PLAYER_Y2-10
+
+        if key == 84:
+            PLAYER_Y1, PLAYER_Y2 = PLAYER_Y1+10, PLAYER_Y2+10
+        
+        if key == 81:
+           PLAYER_X1, PLAYER_X2 = PLAYER_X1-10, PLAYER_X2-10
+
+        if key == 832:
+            PLAYER_X1, PLAYER_X2 = PLAYER_X1+10, PLAYER_X2+10
+
         # quit if 'q' is pressed
         if key == ord('q'):
             break
