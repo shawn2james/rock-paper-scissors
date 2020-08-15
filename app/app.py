@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/media/shawn/new-volume/anaconda3/envs/rock-paper-scissors/bin/python
 # imports
 import cv2
 from random import randint
@@ -27,7 +27,7 @@ BORDER_THICKNESS = 2
 
 # loading images and initializing a random image to be displayed
 comp_images = load_comp_images(
-    '../comp-images', (COMP_X1, COMP_Y1, COMP_X2, COMP_Y2),
+    'comp-images', (COMP_X1, COMP_Y1, COMP_X2, COMP_Y2),
     (X_OFFSET, Y_OFFSET), "png")
 
 # video object to capture image using webcam
@@ -174,7 +174,7 @@ if play:
         if key == 81:
            PLAYER_X1, PLAYER_X2 = PLAYER_X1-10, PLAYER_X2-10
 
-        if key == 832:
+        if key == 83:
             PLAYER_X1, PLAYER_X2 = PLAYER_X1+10, PLAYER_X2+10
 
         # quit if 'q' is pressed
