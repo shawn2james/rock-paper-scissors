@@ -11,7 +11,7 @@ from random import randint
 train = input("Is it training set? (Y/N): ")
 # the below input was made so that the person could try changing the code without saving the images if needed
 save = input("Do you want to save the images? (Y/N): ")
-# which class?
+# which class ?
 images_cls = input("Enter class of images (rock/paper/scissors/none/all): ")
 
 ######################################### SETTING NO. OF IMAGES ALREADY SAVED ##########################################
