@@ -1,4 +1,3 @@
-#!/media/shawn/new-volume/anaconda3/envs/rock-paper-scissors/bin/python
 # imports
 import cv2
 from random import randint
